@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+  --color-gradient-1: #a3a8f0;
+  --color-gradient-2: #696fdd;
+  --color-very-light-greyish-blue: #f6f6fe;
+  --color-light-greyish-blue: #b3b5c6;
+  --color-greyish-blue: #6d708d;
+  --color-dark-greyish-blue: #494c5f;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--color-dark-greyish-blue);
+  cursor: default;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  min-height: 100vh;
+  padding: 7.2rem 4rem;
+  background: url(../images/bg-bottom.svg), url(../images/bg-top.svg),
+    var(--color-very-light-greyish-blue);
+  background-repeat: no-repeat;
+  background-position: bottom left, top right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background-color: var(--color-very-light-greyish-blue); */
+}
+
+.hidden {
+  display: none;
+}
+
+.container__title {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.container__title h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--color-dark-greyish-blue);
+  margin-bottom: 4rem;
+}
+
+.container__title span {
+  color: var(--color-light-greyish-blue);
+}
+.container__change {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 23rem;
+}
+.button__change {
+  cursor: pointer;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-gradient-1),
+    var(--color-gradient-2)
+  );
+  height: 3.2rem;
+  width: 5.2rem;
+  border-radius: 2rem;
+  border: none;
+  display: flex;
+  outline: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+.button__change span {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  z-index: 1;
+  margin: 0.3rem;
+  cursor: pointer;
+}
+
+.card__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50rem;
+  width: 100rem;
+}
+
+.card {
+  height: 90%;
+  border-radius: 2rem 0 0 2rem;
+  background-color: #fff;
+  width: 33.3333333%;
+  box-shadow: 1px 2px 20px -10px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.card__title {
+  font-size: 1.8rem;
+}
+
+.card__price {
+  font-size: 6rem;
+}
+
+.euro {
+  font-size: 4rem;
+}
+
+.card:nth-child(3) {
+  border-radius: 0rem 2rem 2rem 0;
+}
+
+.card__list {
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+}
+.card__list li {
+  width: 100%;
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-light-greyish-blue);
+}
+.card__list li:last-child {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-light-greyish-blue);
+}
+
+#professional {
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-gradient-1),
+    var(--color-gradient-2)
+  );
+  color: #fff;
+  border-radius: 2rem;
+}
+
+#professional .card__list li {
+  border-color: #fff;
+}
+
+.btn {
+  height: 4.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-gradient-1),
+    var(--color-gradient-2)
+  );
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.3rem;
+  border-radius: 6px;
+  transition: all 0.5s;
+}
+.btn:hover {
+  background: transparent;
+  border: 1px solid var(--color-gradient-2);
+  color: var(--color-gradient-2);
+}
+
+#professional .btn {
+  background: #fff;
+  color: var(--color-gradient-2);
+}
+
+#professional .btn:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+@media all and (max-width: 1040px) {
+  body {
+    padding: 6rem 2.2rem;
+  }
+  .card__container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
+  }
+  .card__title,
+  .card__price,
+  .card__list,
+  .btn {
+    margin-bottom: 2.5rem;
+  }
+  .btn {
+    margin-top: 2.5rem;
+  }
+  .card:nth-child(3) {
+    border-radius: 2rem;
+  }
+}
